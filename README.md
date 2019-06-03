@@ -17,6 +17,8 @@ This dataset consists of articles I scraped from RSS feeds of Hürriyet and Cumh
 - Remove Turkish stopwords (optional).
 - Return as a list or as one string (depends the parameter).
 
+Note that pre-processing usually have lemmatization and stemming steps, too. But I skipped those steps for two reasons. The first reason is Turkish language being hard to process because of the complex morphology and the way morphology interacts with syntax. The second reason is there are no well-defined open source Turkish NLP libraries I can benefit from at the moment.
+
 ## LDA
 
 I used gensim.models.LdaModel to build the LDA model with 20 topics. To evaluate this model I calculated the Perplexity and Coherence Score. 
