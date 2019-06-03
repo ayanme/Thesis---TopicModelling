@@ -10,16 +10,20 @@ This dataset consists of articles I scraped from RSS feeds of Hürriyet and Cumh
 
 ## Pre-Processing 
 
-1. Text is converted to lowercase. Thus, words with uppercase are not considered different words from their lowercase equivalents.
-2. Replace special characters with their corresponding Turkish characters.
-3. Remove non-Turkish-letter characters such as digits or punctuation marks.
-4. Split text into a list of words.
-5. Remove Turkish stopwords (optional).
-6. Return as a list or as one string (depends the parameter).
+- Text is converted to lowercase. Thus, words with uppercase are not considered different words from their lowercase equivalents.
+- Replace special characters with their corresponding Turkish characters.
+- Remove non-Turkish-letter characters such as digits or punctuation marks.
+- Split text into a list of words.
+- Remove Turkish stopwords (optional).
+- Return as a list or as one string (depends the parameter).
 
 ## LDA
 
-I used gensim.models.LdaModel to build the LDA model with 20 topics. To evaluate this model I calculated the Perplexity and Coherence Score. A low perplexity means the probability distribution is good at predicting the sample. High topic coherence scores shows a good topic model generating coherent topics that can be described by a short label. The Perplexity of the LDA model is -9.005 and the Coherence Score is 0.472.
+I used gensim.models.LdaModel to build the LDA model with 20 topics. To evaluate this model I calculated the Perplexity and Coherence Score. 
+- A low perplexity means the probability distribution is good at predicting the sample. 
+- High topic coherence scores shows a good topic model generating coherent topics that can be described by a short label. 
+
+The Perplexity of the LDA model is -9.005 and the Coherence Score is 0.472.
 
 ## pyLDAvis
 
