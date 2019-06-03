@@ -21,6 +21,16 @@ This dataset consists of articles I scraped from RSS feeds of Hürriyet and Cumh
 
 I used gensim.models.LdaModel to build the LDA model with 20 topics. To evaluate this model I calculated the Perplexity and Coherence Score. A low perplexity means the probability distribution is good at predicting the sample. High topic coherence scores shows a good topic model generating coherent topics that can be described by a short label. The Perplexity of the LDA model is -9.005 and the Coherence Score is 0.472.
 
-In order to show the topic model, I used pyLDAvis package for interactive topic model visualization and get the html file pyLDAvis_25.html as shown. The left side display the intertopic distance map and the right side display the top-30 most salient terms for the topic.
+## pyLDAvis
+
+In order to show the topic model, I used pyLDAvis package for interactive topic model visualization and get the html file pyLDAvis_25.html as shown. 
+
+- Each circle on Intertopic Distance Map shows a topic. These circles are proportional to topic frequencies, so if a circle is more large, that topic is more prevalent.
+
+- If you have a big, non-overlapping circles scattered around the chart, that means you have a fairly good topic model.
+
+- If you end up with too many topics, you will have many overlaps with small sized bubbles being clustered in one region of the map.
+
+- If you select a circle or a topic, you will see it highlighted and when you look at the right-side, it will automatically give you the most relevant terms for that topic. Red bars indicate term-frequency within the selected topic. Gray bars indicate overall term-frequencies across the corpus.
 
 ![pyLDavis](https://user-images.githubusercontent.com/43665538/58829755-4b946480-8651-11e9-8fa7-86b8d4842657.png)
